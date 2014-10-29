@@ -1,8 +1,8 @@
 using System;
 using System.Drawing;
-using SimplePaletteQuantizer.Helpers;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Helpers;
 
-namespace SimplePaletteQuantizer.Ditherers.Ordered
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Ditherers.Ordered
 {
     public abstract class BaseOrderedDitherer : BaseColorDitherer
     {
