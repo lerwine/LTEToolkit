@@ -1,9 +1,9 @@
 using System;
 using System.Drawing;
 using System.Collections.Generic;
-using SimplePaletteQuantizer.Helpers;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Helpers;
 
-namespace SimplePaletteQuantizer.Quantizers.XiaolinWu
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Quantizers.XiaolinWu
 {
     /// <summary>
     /// Author:	Xiaolin Wu
