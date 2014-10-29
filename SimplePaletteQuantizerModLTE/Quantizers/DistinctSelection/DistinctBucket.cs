@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 
-namespace SimplePaletteQuantizer.Quantizers.DistinctSelection
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Quantizers.DistinctSelection
 {
     public class DistinctBucket
     {
