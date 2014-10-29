@@ -2,9 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using SimplePaletteQuantizer.Helpers;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Helpers;
+using Erwine.Leonard.T.Toolkit.Collections.Synchronized;
 
-namespace SimplePaletteQuantizer.Quantizers.Octree
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Quantizers.Octree
 {
     /// <summary>
     /// The idea here is to build a tree structure containing always a maximum of K different 
@@ -29,13 +30,62 @@ namespace SimplePaletteQuantizer.Quantizers.Octree
     {
         #region | Fields |
 
-        private OctreeNode root;
+        private OctreeNode _root = null;
         private Int32 lastColorCount;
-        private List<OctreeNode>[] levels;
+        private SynchronizedReadOnlyList<NonNullSynchronizedList<OctreeNode>> _levels = null;
 
         #endregion
 
         #region | Calculated properties |
+
+        private object _syncRootForLevels = new object();
+
+        private OctreeNode Root
+        {
+            get
+            {
+                bool justCreated = false;
+
+                lock (this._syncRootForLevels)
+                {
+                    justCreated = this._root == null;
+                    if (justCreated)
+                        this._root = new OctreeNode(0, this);
+                }
+
+                // If this was a new root node, we'll give other threads a chance to do what they need to do before we return the octree node to the caller.
+                // Previously, a System.ArgumentNull exception was being thrown shortly after this was called, due to null nodes in
+                // one of the the Levels collections. This, combined with using thread-safe collections seems to have fixed it.
+                if (justCreated) 
+                    System.Threading.Thread.Sleep(10);
+
+                return this._root;
+            }
+            set
+            {
+                lock (this._syncRootForLevels)
+                    this._root = value;
+            }
+        }
+
+        private SynchronizedReadOnlyList<NonNullSynchronizedList<OctreeNode>> Levels
+        {
+            get
+            {
+                lock (this._syncRootForLevels)
+                {
+                    if (this._levels == null)
+                        this._levels = new SynchronizedReadOnlyList<NonNullSynchronizedList<OctreeNode>>(7);
+                }
+
+                return this._levels;
+            }
+            set
+            {
+                lock (this._syncRootForLevels)
+                    this._levels = value;
+            }
+        }
 
         /// <summary>
         /// Gets the leaf nodes only (recursively).
@@ -43,7 +93,7 @@ namespace SimplePaletteQuantizer.Quantizers.Octree
         /// <value>All the tree leaves.</value>
         internal IEnumerable<OctreeNode> Leaves
         {
-            get { return root.ActiveNodes.Where(node => node.IsLeaf); }
+            get { return this.Root.ActiveNodes.Where(node => node.IsLeaf); }
         }
 
         #endregion
@@ -57,7 +107,10 @@ namespace SimplePaletteQuantizer.Quantizers.Octree
         /// <param name="octreeNode">The octree node to be added.</param>
         internal void AddLevelNode(Int32 level, OctreeNode octreeNode)
         {
-            levels[level].Add(octreeNode);
+            if (octreeNode == null)
+                throw new ArgumentNullException("octreeNode");
+
+            this.Levels[level].Add(octreeNode);
         }
 
         #endregion
@@ -71,6 +124,7 @@ namespace SimplePaletteQuantizer.Quantizers.Octree
         {
             base.OnPrepare(image);
 
+            // TODO: See if this is no longer necessary
             OnFinish();
         }
 
@@ -79,7 +133,7 @@ namespace SimplePaletteQuantizer.Quantizers.Octree
         /// </summary>
         protected override void OnAddColor(Color color, Int32 key, Int32 x, Int32 y)
         {
-            root.AddColor(color, 0, this);
+            this.Root.AddColor(color, 0, this);
         }
 
         /// <summary>
@@ -101,10 +155,10 @@ namespace SimplePaletteQuantizer.Quantizers.Octree
             for (Int32 level = 6; level >= 0; level--)
             {
                 // if level contains any node
-                if (levels[level].Count > 0)
+                if (this.Levels[level].Count > 0)
                 {
                     // orders the level node list by pixel presence (those with least pixels are at the top)
-                    IEnumerable<OctreeNode> sortedNodeList = levels[level].OrderBy(node => node.ActiveNodesPixelCount);
+                    IEnumerable<OctreeNode> sortedNodeList = this.Levels[level].OrderBy(node => node.ActiveNodesPixelCount);
 
                     // removes the nodes unless the count of the leaves is lower or equal than our requested color count
                     foreach (OctreeNode node in sortedNodeList)
@@ -120,7 +174,7 @@ namespace SimplePaletteQuantizer.Quantizers.Octree
                     if (leafCount <= colorCount) break;
 
                     // otherwise clear whole level, as it is not needed anymore
-                    levels[level].Clear();
+                    this.Levels[level].Clear();
                 }
             }
 
@@ -155,7 +209,7 @@ namespace SimplePaletteQuantizer.Quantizers.Octree
         protected override void OnGetPaletteIndex(Color color, Int32 key, Int32 x, Int32 y, out Int32 paletteIndex)
         {
             // retrieves a palette index
-            paletteIndex = root.GetPaletteIndex(color, 0);
+            paletteIndex = this.Root.GetPaletteIndex(color, 0);
         }
 
         /// <summary>
@@ -174,17 +228,9 @@ namespace SimplePaletteQuantizer.Quantizers.Octree
         {
             base.OnFinish();
 
-            // initializes the octree level lists
-            levels = new List<OctreeNode>[7];
-
-            // creates the octree level lists
-            for (Int32 level = 0; level < 7; level++)
-            {
-                levels[level] = new List<OctreeNode>();
-            }
-
-            // creates a root node
-            root = new OctreeNode(0, this);
+            // Set Levels and Root to null. The next time it they needed, created will be created again and initialized with new octree level lists
+            this.Levels = null;
+            this.Root = null;
         }
 
         #endregion
