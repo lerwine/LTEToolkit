@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 
-namespace SimplePaletteQuantizer.Quantizers.DistinctSelection
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Quantizers.DistinctSelection
 {
     /// <summary>
     /// Stores all the informations about single color only once, to be used later.
