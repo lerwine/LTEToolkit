@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using SimplePaletteQuantizer.ColorCaches.Common;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.ColorCaches.Common;
 
-namespace SimplePaletteQuantizer.Helpers
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Helpers
 {
     public class ColorModelHelper
     {
