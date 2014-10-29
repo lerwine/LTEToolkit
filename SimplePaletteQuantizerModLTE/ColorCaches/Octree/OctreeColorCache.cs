@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using SimplePaletteQuantizer.ColorCaches.Common;
-using SimplePaletteQuantizer.Helpers;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.ColorCaches.Common;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Helpers;
 
-namespace SimplePaletteQuantizer.ColorCaches.Octree
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.ColorCaches.Octree
 {
     public class OctreeColorCache : BaseColorCache
     {
