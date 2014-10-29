@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace SimplePaletteQuantizer.PathProviders
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.PathProviders
 {
     public class ReversedPathProvider : IPathProvider
     {
