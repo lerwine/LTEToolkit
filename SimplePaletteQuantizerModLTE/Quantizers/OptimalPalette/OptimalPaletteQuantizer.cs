@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using SimplePaletteQuantizer.ColorCaches;
-using SimplePaletteQuantizer.ColorCaches.Octree;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.ColorCaches;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.ColorCaches.Octree;
 
-namespace SimplePaletteQuantizer.Quantizers.OptimalPalette
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Quantizers.OptimalPalette
 {
     public class OptimalPaletteQuantizer : BaseColorCacheQuantizer
     {
