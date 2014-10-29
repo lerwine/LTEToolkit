@@ -4,16 +4,16 @@ using System;
 using System.Linq;
 using System.Drawing;
 using System.Collections.Generic;
-using SimplePaletteQuantizer.ColorCaches;
-using SimplePaletteQuantizer.ColorCaches.Octree;
-using SimplePaletteQuantizer.Extensions;
-using SimplePaletteQuantizer.Helpers;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.ColorCaches;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.ColorCaches.Octree;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Extensions;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Helpers;
 
 #if (UseDictionary)
     using System.Collections.Concurrent;
 #endif
 
-namespace SimplePaletteQuantizer.Quantizers.DistinctSelection
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Quantizers.DistinctSelection
 {
     /// <summary>
     /// This is my baby. Read more in the article on the Code Project:
