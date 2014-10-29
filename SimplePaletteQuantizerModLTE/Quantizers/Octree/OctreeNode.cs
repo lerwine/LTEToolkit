@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 
-namespace SimplePaletteQuantizer.Quantizers.Octree
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Quantizers.Octree
 {
     internal class OctreeNode
     {
