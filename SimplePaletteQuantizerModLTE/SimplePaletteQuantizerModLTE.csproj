@@ -8,7 +8,7 @@
     <ProjectGuid>{6A586BEA-429F-4DF9-9501-9CCFA3D533DD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SimplePaletteQuantizer</RootNamespace>
+    <RootNamespace>Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer</RootNamespace>
     <AssemblyName>SimplePaletteQuantizer.Mod.LTE</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -117,6 +117,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LTEToolkitLibrary\LTEToolkitLibrary.csproj">
+      <Project>{0CAA3B7E-EE96-4BDE-87D3-DDB4E3DFBE42}</Project>
+      <Name>LTEToolkitLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
