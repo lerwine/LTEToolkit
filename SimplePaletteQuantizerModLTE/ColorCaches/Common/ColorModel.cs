@@ -1,4 +1,4 @@
-namespace SimplePaletteQuantizer.ColorCaches.Common
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.ColorCaches.Common
 {
     public enum ColorModel
     {
