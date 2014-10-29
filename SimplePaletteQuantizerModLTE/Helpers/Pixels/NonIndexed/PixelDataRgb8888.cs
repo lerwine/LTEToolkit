@@ -2,7 +2,7 @@ using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
 
-namespace SimplePaletteQuantizer.Helpers.Pixels.NonIndexed
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Helpers.Pixels.NonIndexed
 {
     /// <summary>
     /// Name |          Blue         |        Green          |           Red         |         Unused        |
