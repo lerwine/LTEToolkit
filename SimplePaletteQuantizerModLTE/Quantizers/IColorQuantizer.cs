@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using SimplePaletteQuantizer.Helpers;
-using SimplePaletteQuantizer.PathProviders;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Helpers;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.PathProviders;
 
-namespace SimplePaletteQuantizer.Quantizers
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Quantizers
 {
     /// <summary>
     /// This interface provides a color quantization capabilities.
