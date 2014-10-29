@@ -1,6 +1,6 @@
 using System;
 
-namespace SimplePaletteQuantizer.Ditherers.Ordered
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Ditherers.Ordered
 {
     public class ClusteredDotDitherer : BaseOrderedDitherer
     {
