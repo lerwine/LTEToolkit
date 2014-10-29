@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace SimplePaletteQuantizer.ColorCaches
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.ColorCaches
 {
     public interface IColorCache
     {
