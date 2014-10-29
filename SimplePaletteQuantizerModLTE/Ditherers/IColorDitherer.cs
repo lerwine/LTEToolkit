@@ -1,9 +1,9 @@
 using System;
-using SimplePaletteQuantizer.Helpers;
-using SimplePaletteQuantizer.PathProviders;
-using SimplePaletteQuantizer.Quantizers;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Helpers;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.PathProviders;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Quantizers;
 
-namespace SimplePaletteQuantizer.Ditherers
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Ditherers
 {
     public interface IColorDitherer : IPathProvider
     {
