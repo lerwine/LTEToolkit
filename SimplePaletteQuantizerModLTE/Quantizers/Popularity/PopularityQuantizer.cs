@@ -3,11 +3,11 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using SimplePaletteQuantizer.ColorCaches;
-using SimplePaletteQuantizer.ColorCaches.Octree;
-using SimplePaletteQuantizer.Helpers;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.ColorCaches;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.ColorCaches.Octree;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Helpers;
 
-namespace SimplePaletteQuantizer.Quantizers.Popularity
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Quantizers.Popularity
 {
     /// <summary>
     /// Popularity algorithms are another form of uniform quantization. However, instead of 
