@@ -2,10 +2,10 @@ using System;
 using System.Linq;
 using System.Drawing;
 using System.Collections.Generic;
-using SimplePaletteQuantizer.Helpers;
-using SimplePaletteQuantizer.ColorCaches.Common;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Helpers;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.ColorCaches.Common;
 
-namespace SimplePaletteQuantizer.ColorCaches.LocalitySensitiveHash
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.ColorCaches.LocalitySensitiveHash
 {
     public class LshColorCache : BaseColorCache
     {
