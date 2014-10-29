@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using SimplePaletteQuantizer.Helpers;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Helpers;
 
-namespace SimplePaletteQuantizer.Quantizers.Uniform
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Quantizers.Uniform
 {
     /// <summary>
     /// In uniform quantization each axis of the color space is treated independently. 
