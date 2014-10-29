@@ -3,11 +3,11 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.Linq.Expressions;
 using System.Runtime.InteropServices;
-using SimplePaletteQuantizer.Helpers.Pixels;
-using SimplePaletteQuantizer.Helpers.Pixels.Indexed;
-using SimplePaletteQuantizer.Helpers.Pixels.NonIndexed;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Helpers.Pixels;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Helpers.Pixels.Indexed;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Helpers.Pixels.NonIndexed;
 
-namespace SimplePaletteQuantizer.Helpers
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Helpers
 {
     /// <summary>
     /// This is a pixel format independent pixel.
