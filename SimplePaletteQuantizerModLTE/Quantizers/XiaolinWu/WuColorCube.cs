@@ -1,6 +1,6 @@
 using System;
 
-namespace SimplePaletteQuantizer.Quantizers.XiaolinWu
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Quantizers.XiaolinWu
 {
     internal class WuColorCube
     {
