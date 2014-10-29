@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SimplePaletteQuantizer.Extensions
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Extensions
 {
     public static partial class Extend
     {
