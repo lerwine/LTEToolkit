@@ -5,7 +5,13 @@ Converted to a class library by Leonard T. Erwine, October, 2014.
 This contains source code which was taken from a Code Project Article and modified as a class library.
 A bug was discovered in the Octre quantizer, which I fixed using locking and thread-safe collections from the LTEToolkitLibrary C# project.
 
-Summary of modifications:
+Dependency Information
+----------------------
+
+The modifications to this project depend upon thread-safe collections which exist in the LTEToolKitLibrary project.
+
+Summary of modifications
+------------------------
 
 - Changed root namespace from "SimplePaletteQuantizer" to "Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer" to make it uniform with the rest of the solution.
 
