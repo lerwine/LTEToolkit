@@ -1,6 +1,6 @@
 using System;
 
-namespace SimplePaletteQuantizer.Helpers.Pixels
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Helpers.Pixels
 {
     public interface IIndexedPixel
     {
