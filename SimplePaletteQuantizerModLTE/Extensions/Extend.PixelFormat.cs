@@ -1,7 +1,7 @@
 using System;
 using System.Drawing.Imaging;
 
-namespace SimplePaletteQuantizer.Extensions
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Extensions
 {
     /// <summary>
     /// The utility extender class.
