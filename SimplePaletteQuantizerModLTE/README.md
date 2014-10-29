@@ -9,12 +9,12 @@ Summary of modifications:
 
 - Changed root namespace from "SimplePaletteQuantizer" to "Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer" to make it uniform with the rest of the solution.
 
-- Encountered frequent System.ArgumentNullException errors due to null nodes existing in the Levels collections
+- Encountered frequent System.NullReference errors due to null nodes existing in the Levels collections
 	(Quantizers/Octree/OctreeQuantizer.cs, Method: OnGetPalette, while ording the level nodes by pixel presence). It did not seem that having null nodes in those
 	collections was a desired behavior, so I modified Quantizers/Octree/OctreeQuantizer.cs to use thread-safe collections for the root node and level node collections.
 	Also, since the level node collection was of a fixed length, changed it to use a read-only thread-safe collection.
 	Lastly, I added a call to Thread.Sleep after a new root node was created, to give other threads a chance to catch up, in case this was the cause
-	of the System.ArgumentNullException error.
+	of the System.NullReference error.
 
 Original source code information
 --------------------------------
