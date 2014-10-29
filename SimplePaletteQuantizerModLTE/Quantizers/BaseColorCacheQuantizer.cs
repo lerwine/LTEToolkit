@@ -1,10 +1,10 @@
 using System;
 using System.Drawing;
 using System.Collections.Generic;
-using SimplePaletteQuantizer.ColorCaches;
-using SimplePaletteQuantizer.Helpers;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.ColorCaches;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Helpers;
 
-namespace SimplePaletteQuantizer.Quantizers
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Quantizers
 {
     public abstract class BaseColorCacheQuantizer : BaseColorQuantizer
     {
