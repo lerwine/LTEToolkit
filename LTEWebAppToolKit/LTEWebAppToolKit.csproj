@@ -57,7 +57,7 @@
     <Compile Include="ExtensionMethods\IEnumerableTypes\Take2ParseResult.cs" />
     <Compile Include="ExtensionMethods\IEnumerableTypes\Take2Relation.cs" />
     <Compile Include="ExtensionMethods\IEnumerableTypes\Take2RelationResult.cs" />
-    <Compile Include="ExtensionMethods\MultilineText\StringExtensions.cs" />
+    <Compile Include="ExtensionMethods\MultiLineText\StringExtensions.cs" />
     <Compile Include="LoggingModule\CustomTraceManagerModule.cs" />
     <Compile Include="LoggingModule\ExtensionMethods\DescriptionExtensions.cs" />
     <Compile Include="LoggingModule\ExtensionMethods\TraceEventTypeExtensions.cs" />
