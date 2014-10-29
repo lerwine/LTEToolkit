@@ -14,7 +14,7 @@ namespace Erwine.Leonard.T.Toolkit.WebApp.LoggingModule
             get
             {
                 if (CustomTraceManagerModule._traceSource == null)
-                    CustomTraceManagerModule._traceSource = new TraceSource(Properties.Settings.Default.TraceSource_Name, SourceLevels.All);
+                    CustomTraceManagerModule._traceSource = new TraceSource(LTEWebAppToolKit.Properties.Settings.Default.TraceSource_Name, SourceLevels.All);
 
                 return CustomTraceManagerModule._traceSource;
             }
