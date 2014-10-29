@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace SimplePaletteQuantizer.ColorCaches.Octree
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.ColorCaches.Octree
 {
     public class OctreeCacheNode
     {
