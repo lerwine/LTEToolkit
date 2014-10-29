@@ -1,6 +1,6 @@
 using System;
 
-namespace SimplePaletteQuantizer.Helpers
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Helpers
 {
     public static class Guard
     {
