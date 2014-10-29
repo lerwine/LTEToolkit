@@ -3,13 +3,13 @@
   <Profiles />
   <Settings>
     <Setting Name="TraceSource_Name" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">MyExampleTraceSource</Value>
+      <Value Profile="(Default)">MyExampleTraceSourceName</Value>
     </Setting>
     <Setting Name="Category_Event" Type="System.String" Scope="Application">
       <Value Profile="(Default)">MyExampleEventCategory</Value>
     </Setting>
     <Setting Name="Category_None" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">ExampleDefaultCategory</Value>
+      <Value Profile="(Default)">MyExampleDefaultCategory</Value>
     </Setting>
   </Settings>
 </SettingsFile>
