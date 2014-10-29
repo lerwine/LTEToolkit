@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace SimplePaletteQuantizer.ColorCaches.LocalitySensitiveHash
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.ColorCaches.LocalitySensitiveHash
 {
     public class BucketInfo
     {
