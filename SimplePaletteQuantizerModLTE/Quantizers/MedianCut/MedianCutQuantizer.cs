@@ -2,10 +2,10 @@ using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Drawing;
-using SimplePaletteQuantizer.ColorCaches;
-using SimplePaletteQuantizer.Helpers;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.ColorCaches;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Helpers;
 
-namespace SimplePaletteQuantizer.Quantizers.MedianCut
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Quantizers.MedianCut
 {
     /// <summary>
     /// The premise behind median cut algorithms is to have every entry in the color map represent 
