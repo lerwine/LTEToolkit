@@ -7,6 +7,8 @@ A bug was discovered in the Octre quantizer, which I fixed using locking and thr
 
 Original source code information
 --------------------------------
+
+| Name                                          | Description                                                                                     |
 | --------------------------------------------: | :---------------------------------------------------------------------------------------------- |
 |                <strong>Article name:</strong> | A Simple - Yet Quite Powerful - Palette Quantizer in C#                                         |
 |                     <strong>License:</strong> | Code Project Open License (CPOL) 1.02                                                           |
