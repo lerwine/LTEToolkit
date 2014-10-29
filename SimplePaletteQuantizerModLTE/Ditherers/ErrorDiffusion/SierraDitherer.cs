@@ -1,6 +1,6 @@
 using System;
 
-namespace SimplePaletteQuantizer.Ditherers.ErrorDiffusion
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Ditherers.ErrorDiffusion
 {
     public class SierraDitherer : BaseErrorDistributionDitherer
     {
