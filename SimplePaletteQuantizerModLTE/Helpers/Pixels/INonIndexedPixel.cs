@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 
-namespace SimplePaletteQuantizer.Helpers.Pixels
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Helpers.Pixels
 {
     public interface INonIndexedPixel
     {
