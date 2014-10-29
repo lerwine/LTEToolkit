@@ -1,8 +1,8 @@
 using System;
 using System.Drawing;
-using SimplePaletteQuantizer.Helpers;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Helpers;
 
-namespace SimplePaletteQuantizer.Ditherers.ErrorDiffusion
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Ditherers.ErrorDiffusion
 {
     public abstract class BaseErrorDistributionDitherer : BaseColorDitherer
     {
