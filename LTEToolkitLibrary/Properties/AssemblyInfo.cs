@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("LTEToolkitLibrary")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Lenny Erwine's .NET 4.0 Toolkit Library")]
+[assembly: AssemblyDescription("Re-usable code for .NET 4.0")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Leonard T. Erwine")]
 [assembly: AssemblyProduct("LTEToolkitLibrary")]
-[assembly: AssemblyCopyright("Copyright ©  2014")]
+[assembly: AssemblyCopyright("Leonard T. Erwine, October 2014, Code Project Open License (CPOL) 1.02")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("d34e171a-6e6e-4046-80eb-b972d78d80e3")]
+[assembly: Guid("facde807-1e74-47d9-ab96-956830ac2880")]
 
 // Version information for an assembly consists of the following four values:
 //
