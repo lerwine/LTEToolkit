@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B17265F1-A0B1-4CB9-973E-EB4843D3DC75}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Erwine.Leonard.T.Toolkit</RootNamespace>
+    <AssemblyName>LTEToolkitLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Collections\GenericAccessObservableCollection.cs" />
+    <Compile Include="Collections\IExpandable.cs" />
+    <Compile Include="Collections\IGenericAccessObservableCollection.cs" />
+    <Compile Include="Collections\ISelectable.cs" />
+    <Compile Include="Collections\ISelectableCollection.cs" />
+    <Compile Include="Collections\Synchronized\NonNullSynchronizedList.cs" />
+    <Compile Include="Collections\Synchronized\SynchronizedEnumerableBase.cs" />
+    <Compile Include="Collections\Synchronized\SynchronizedList.cs" />
+    <Compile Include="Collections\Synchronized\SynchronizedReadOnlyList.cs" />
+    <Compile Include="Collections\Synchronized\TypedEnumeratorWrapper.cs" />
+    <Compile Include="Comparison\ObjectInstanceComparer.cs" />
+    <Compile Include="Events\IndexShiftEventArgs.cs" />
+    <Compile Include="Events\IndexShiftEventHandler.cs" />
+    <Compile Include="Events\IndexedMoveValueEventArgs.cs" />
+    <Compile Include="Events\IndexedMoveValueEventHandler.cs" />
+    <Compile Include="Events\IndexedValueEventArgs.cs" />
+    <Compile Include="Events\IndexedValueEventHandler.cs" />
+    <Compile Include="Events\IndexShiftParameter.cs" />
+    <Compile Include="Events\ValueEventArgs.cs" />
+    <Compile Include="Events\ValueEventHandler.cs" />
+    <Compile Include="ExtensionMethods\TextManagmentExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Text\EmailAddress.cs" />
+    <Compile Include="Text\IndentingStringWriter.cs" />
+    <Compile Include="Tracing\InMemoryTraceListenener.cs" />
+    <Compile Include="Tracing\TraceInformation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
