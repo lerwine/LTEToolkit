@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 
-namespace SimplePaletteQuantizer.Quantizers.Popularity
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Quantizers.Popularity
 {
     internal class PopularityColorSlot
     {
