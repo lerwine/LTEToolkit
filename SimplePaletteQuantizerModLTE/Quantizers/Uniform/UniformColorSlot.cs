@@ -1,6 +1,6 @@
 using System;
 
-namespace SimplePaletteQuantizer.Quantizers.Uniform
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Quantizers.Uniform
 {
     internal struct UniformColorSlot
     {
