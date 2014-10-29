@@ -2,9 +2,9 @@ using System;
 using System.Collections.Concurrent;
 using System.Drawing;
 using System.Collections.Generic;
-using SimplePaletteQuantizer.ColorCaches.Common;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.ColorCaches.Common;
 
-namespace SimplePaletteQuantizer.ColorCaches
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.ColorCaches
 {
     public abstract class BaseColorCache : IColorCache
     {
