@@ -4,13 +4,13 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
-using SimplePaletteQuantizer.ColorCaches.Common;
-using SimplePaletteQuantizer.Ditherers;
-using SimplePaletteQuantizer.Extensions;
-using SimplePaletteQuantizer.PathProviders;
-using SimplePaletteQuantizer.Quantizers;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.ColorCaches.Common;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Ditherers;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Extensions;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.PathProviders;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Quantizers;
 
-namespace SimplePaletteQuantizer.Helpers
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Helpers
 {
     public class ImageBuffer : IDisposable
     {
