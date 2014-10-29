@@ -12,13 +12,21 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{07BEB613-AF8E-4A55-A881-6240452085E2}"
 	ProjectSection(SolutionItems) = preProject
 		LICENSE = LICENSE
+		Local.testsettings = Local.testsettings
+		LTEToolkit.vsmdi = LTEToolkit.vsmdi
 		README.md = README.md
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTEToolkitLibraryTestProject", "LTEToolkitLibraryTestProject\LTEToolkitLibraryTestProject.csproj", "{EABC6BDA-F80E-4B11-B1B4-225F17CBB1FF}"
 EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
 		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = LTEToolkit.vsmdi
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +49,10 @@ Global
 		{351DDA25-4FDD-463E-9985-368546CF5733}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{351DDA25-4FDD-463E-9985-368546CF5733}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{351DDA25-4FDD-463E-9985-368546CF5733}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EABC6BDA-F80E-4B11-B1B4-225F17CBB1FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EABC6BDA-F80E-4B11-B1B4-225F17CBB1FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EABC6BDA-F80E-4B11-B1B4-225F17CBB1FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EABC6BDA-F80E-4B11-B1B4-225F17CBB1FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
