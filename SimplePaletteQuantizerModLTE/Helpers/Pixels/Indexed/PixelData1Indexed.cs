@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace SimplePaletteQuantizer.Helpers.Pixels.Indexed
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Helpers.Pixels.Indexed
 {
     [StructLayout(LayoutKind.Sequential, Size = 1)]
     public struct PixelData1Indexed : IIndexedPixel
