@@ -54,7 +54,7 @@ namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Quantizers.Octree
                 }
 
                 // If this was a new root node, we'll give other threads a chance to do what they need to do before we return the octree node to the caller.
-                // Previously, a System.ArgumentNull exception was being thrown shortly after this was called, due to null nodes in
+                // Previously, a System.NullReference exception was being thrown shortly after this was called, due to null nodes in
                 // one of the the Levels collections. This, combined with using thread-safe collections seems to have fixed it.
                 if (justCreated) 
                     System.Threading.Thread.Sleep(10);
