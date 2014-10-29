@@ -2,9 +2,9 @@ using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Drawing;
-using SimplePaletteQuantizer.Helpers;
+using Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Helpers;
 
-namespace SimplePaletteQuantizer.Quantizers.NeuQuant
+namespace Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer.Quantizers.NeuQuant
 {
     /// <summary>
     /// The NeuQuant Neural-Net image quantization algorithm (© Anthony Dekker 1994) 
