@@ -1,86 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>
-    </ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{EABC6BDA-F80E-4B11-B1B4-225F17CBB1FF}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LTEToolkitLibraryTestProject</RootNamespace>
-    <AssemblyName>LTEToolkitLibraryTestProject</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="System" />
-    <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Linq" />
-  </ItemGroup>
-  <ItemGroup>
-    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
-      <Visible>False</Visible>
-    </CodeAnalysisDependentAssemblyPaths>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="SynchronizedCollections\HelperEnumerator.cs" />
-    <Compile Include="SynchronizedCollections\HelperList.cs" />
-    <Compile Include="SynchronizedCollections\HelperObject1.cs" />
-    <Compile Include="SynchronizedCollections\HelperObject2.cs" />
-    <Compile Include="SynchronizedCollections\NonNullSynchronizedListTest.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SynchronizedCollections\SynchronizedReadOnlyListTest.cs" />
-    <Compile Include="SynchronizedCollections\TypedEnumeratorWrapperTest.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Shadow Include="Test-References\LTEToolkitLibrary.accessor" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\FourFivePortability\FourFivePortability.csproj">
-      <Project>{351DDA25-4FDD-463E-9985-368546CF5733}</Project>
-      <Name>FourFivePortability</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LTEToolkitLibrary\LTEToolkitLibrary.csproj">
-      <Project>{0CAA3B7E-EE96-4BDE-87D3-DDB4E3DFBE42}</Project>
-      <Name>LTEToolkitLibrary</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Test-References\LTEToolkitLibrary.accessor" />
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+<PropertyGroup>
+<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+<ProductVersion>8.0.30703</ProductVersion>
+<SchemaVersion>2.0</SchemaVersion>
+<ProjectGuid>{6A586BEA-429F-4DF9-9501-9CCFA3D533DD}</ProjectGuid>
+<OutputType>Library</OutputType>
+<AppDesignerFolder>Properties</AppDesignerFolder>
+<RootNamespace>Erwine.Leonard.T.Toolkit.SimplePaletteQuantizer</RootNamespace>
+<AssemblyName>SimplePaletteQuantizer.Mod.LTE</AssemblyName>
+<TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+<FileAlignment>512</FileAlignment>
+</PropertyGroup>
+<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+<DebugSymbols>true</DebugSymbols>
+<DebugType>full</DebugType>
+<Optimize>false</Optimize>
+<OutputPath>bin\Debug\</OutputPath>
+<DefineConstants>DEBUG;TRACE</DefineConstants>
+<ErrorReport>prompt</ErrorReport>
+<WarningLevel>4</WarningLevel>
+</PropertyGroup>
+<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+<DebugType>pdbonly</DebugType>
+<Optimize>true</Optimize>
+<OutputPath>bin\Release\</OutputPath>
+<DefineConstants>TRACE</DefineConstants>
+<ErrorReport>prompt</ErrorReport>
+<WarningLevel>4</WarningLevel>
+</PropertyGroup>
+<ItemGroup>
+<Reference Include="System" />
+<Reference Include="System.Core" />
+<Reference Include="System.Drawing" />
+<Reference Include="System.Xml.Linq" />
+<Reference Include="System.Data.DataSetExtensions" />
+<Reference Include="Microsoft.CSharp" />
+<Reference Include="System.Data" />
+<Reference Include="System.Xml" />
+</ItemGroup>
+<ItemGroup>
+<Compile Include="ColorCaches\BaseColorCache.cs" />
+<Compile Include="ColorCaches\Common\ColorModel.cs" />
+<Compile Include="ColorCaches\EuclideanDistance\EuclideanDistanceColorCache.cs" />
+<Compile Include="ColorCaches\IColorCache.cs" />
+<Compile Include="ColorCaches\LocalitySensitiveHash\LshBucketInfo.cs" />
+<Compile Include="ColorCaches\LocalitySensitiveHash\LshColorCache.cs" />
+<Compile Include="ColorCaches\Octree\OctreeCacheNode.cs" />
+<Compile Include="ColorCaches\Octree\OctreeColorCache.cs" />
+<Compile Include="Ditherers\BaseColorDitherer.cs" />
+<Compile Include="Ditherers\ErrorDiffusion\AtkinsonDithering.cs" />
+<Compile Include="Ditherers\ErrorDiffusion\BaseErrorDiffusionDitherer.cs" />
+<Compile Include="Ditherers\ErrorDiffusion\BurkesDitherer.cs" />
+<Compile Include="Ditherers\ErrorDiffusion\FanDitherer.cs" />
+<Compile Include="Ditherers\ErrorDiffusion\FilterLiteSierra.cs" />
+<Compile Include="Ditherers\ErrorDiffusion\FloydSteinbergDitherer.cs" />
+<Compile Include="Ditherers\ErrorDiffusion\JarvisJudiceNinkeDitherer.cs" />
+<Compile Include="Ditherers\ErrorDiffusion\ShiauDitherer.cs" />
+<Compile Include="Ditherers\ErrorDiffusion\SierraDitherer.cs" />
+<Compile Include="Ditherers\ErrorDiffusion\StuckiDitherer.cs" />
+<Compile Include="Ditherers\ErrorDiffusion\TwoRowSierraDitherer.cs" />
+<Compile Include="Ditherers\IColorDitherer.cs" />
+<Compile Include="Ditherers\Ordered\BaseOrderedDitherer.cs" />
+<Compile Include="Ditherers\Ordered\BayerDitherer4.cs" />
+<Compile Include="Ditherers\Ordered\BayerDitherer8.cs" />
+<Compile Include="Ditherers\Ordered\ClusteredDotDitherer.cs" />
+<Compile Include="Ditherers\Ordered\DotHalfToneDitherer.cs" />
+<Compile Include="Extensions\Extend.IEnumerable.cs" />
+<Compile Include="Extensions\Extend.Image.cs" />
+<Compile Include="Extensions\Extend.PixelFormat.cs" />
+<Compile Include="Helpers\ColorModelHelper.cs" />
+<Compile Include="Helpers\FastRandom.cs" />
+<Compile Include="Helpers\Guard.cs" />
+<Compile Include="Helpers\ImageBuffer.cs" />
+<Compile Include="Helpers\Pixel.cs" />
+<Compile Include="Helpers\Pixels\IIndexedPixel.cs" />
+<Compile Include="Helpers\Pixels\Indexed\PixelData1Indexed.cs" />
+<Compile Include="Helpers\Pixels\Indexed\PixelData4Indexed.cs" />
+<Compile Include="Helpers\Pixels\Indexed\PixelData8Indexed.cs" />
+<Compile Include="Helpers\Pixels\INonIndexedPixel.cs" />
+<Compile Include="Helpers\Pixels\NonIndexed\PixelDataArgb1555.cs" />
+<Compile Include="Helpers\Pixels\NonIndexed\PixelDataArgb64.cs" />
+<Compile Include="Helpers\Pixels\NonIndexed\PixelDataArgb8888.cs" />
+<Compile Include="Helpers\Pixels\NonIndexed\PixelDataGray16.cs" />
+<Compile Include="Helpers\Pixels\NonIndexed\PixelDataRgb48.cs" />
+<Compile Include="Helpers\Pixels\NonIndexed\PixelDataRgb555.cs" />
+<Compile Include="Helpers\Pixels\NonIndexed\PixelDataRgb565.cs" />
+<Compile Include="Helpers\Pixels\NonIndexed\PixelDataRgb888.cs" />
+<Compile Include="Helpers\Pixels\NonIndexed\PixelDataRgb8888.cs" />
+<Compile Include="Helpers\PixelTransform.cs" />
+<Compile Include="Helpers\QuantizationHelper.cs" />
+<Compile Include="PathProviders\IPathProvider.cs" />
+<Compile Include="PathProviders\ReversedPathProvider.cs" />
+<Compile Include="PathProviders\SerpentinePathProvider.cs" />
+<Compile Include="PathProviders\StandardPathProvider.cs" />
+<Compile Include="Properties\AssemblyInfo.cs" />
+<Compile Include="Quantizers\BaseColorCacheQuantizer.cs" />
+<Compile Include="Quantizers\BaseColorQuantizer.cs" />
+<Compile Include="Quantizers\DistinctSelection\DistinctBucket.cs" />
+<Compile Include="Quantizers\DistinctSelection\DistinctColorInfo.cs" />
+<Compile Include="Quantizers\DistinctSelection\DistinctSelectionQuantizer.cs" />
+<Compile Include="Quantizers\IColorQuantizer.cs" />
+<Compile Include="Quantizers\MedianCut\MedianCutCube.cs" />
+<Compile Include="Quantizers\MedianCut\MedianCutQuantizer.cs" />
+<Compile Include="Quantizers\NeuQuant\NeuralColorQuantizer.cs" />
+<Compile Include="Quantizers\Octree\OctreeNode.cs" />
+<Compile Include="Quantizers\Octree\OctreeQuantizer.cs" />
+<Compile Include="Quantizers\OptimalPalette\OptimalPaletteQuantizer.cs" />
+<Compile Include="Quantizers\Popularity\PopularityColorSlot.cs" />
+<Compile Include="Quantizers\Popularity\PopularityQuantizer.cs" />
+<Compile Include="Quantizers\Uniform\UniformColorSlot.cs" />
+<Compile Include="Quantizers\Uniform\UniformQuantizer.cs" />
+<Compile Include="Quantizers\XiaolinWu\WuColorCube.cs" />
+<Compile Include="Quantizers\XiaolinWu\WuColorQuantizer.cs" />
+</ItemGroup>
+<ItemGroup>
+<None Include="README.md" />
+</ItemGroup>
+<ItemGroup>
+<ProjectReference Include="..\LTEToolkitLibrary\LTEToolkitLibrary.csproj">
+<Project>{0CAA3B7E-EE96-4BDE-87D3-DDB4E3DFBE42}</Project>
+<Name>LTEToolkitLibrary</Name>
+</ProjectReference>
+</ItemGroup>
+<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+<!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+Other similar extension points exist, see Microsoft.Common.targets.
+<Target Name="BeforeBuild">
+</Target>
+<Target Name="AfterBuild">
+</Target>
+-->
 </Project>
