@@ -29,3 +29,15 @@
 *.hex
 /.vs/LTEToolkit/v14/.suo
 /FourFivePortability/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/LTEToolkitLibrary/bin/Debug
+/LTEToolkitLibrary/obj/Debug
+/LTEToolkitLibraryTestProject/bin/Debug
+/LTEWebAppToolKit/bin/Debug
+/LTEToolkitLibraryTestProject/obj/Debug
+/LTEWebAppToolKit/obj/Debug
+/LTEWPFToolkit/bin/Debug
+/LTEWPFToolkit/obj/Debug
+/SimplePaletteQuantizerModLTE/bin/Debug
+/SimplePaletteQuantizerModLTE/obj/Debug
+/FourFivePortability/bin/Debug
+/FourFivePortability/obj/Debug

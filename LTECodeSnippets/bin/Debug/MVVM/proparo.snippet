@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Define a read-only attached DependencyProperty</Title>
+      <Shortcut>proparo</Shortcut>
+      <Description>Code snippet for a read-only property using an Attached DependencyProperty as the backing store</Description>
+      <Author>Leonard T. Erwine (modified version of snippet authored by Microsoft Corporation)</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Property Type</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal>
+          <ID>property</ID>
+          <ToolTip>Property Name</ToolTip>
+          <Default>MyProperty</Default>
+        </Literal>
+        <Literal>
+          <ID>ownerclass</ID>
+          <Function>ClassName()</Function>
+          <ToolTip>The owning class of this Property. Typically the class that it is declared in.</ToolTip>
+        </Literal>
+        <Literal>
+          <ID>defaultValue</ID>
+          <ToolTip>The default value for this property.</ToolTip>
+          <Default>0</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[
+#region $property$ Read-only Attached Property Members
+
+/// <summary>
+/// Defines the name for the attached <see cref="$property$Property"/> property.
+/// </summary>
+public const string DependencyPropertyName_$property$ = "$property$";
+
+/// <summary>
+/// Gets the value of the attached <see cref="$property$Property"/>.
+/// </summary>
+/// <param name="obj">Object from which to retieve the value.</param>
+/// <returns><see cref="$type$"/> value from <paramref name="obj"/>.</returns>
+public static $type$ Get$property$(DependencyObject obj)
+{
+    if (obj == null)
+        throw new ArgumentNullException("obj");
+            
+    return ($type$)(obj.GetValue($property$Property));
+}
+        
+private static void Set$property$(DependencyObject obj, $type$ value)
+{
+    if (obj == null)
+        throw new ArgumentNullException("obj");
+            
+    obj.SetValue($property$Property, value);
+}
+
+private static readonly DependencyPropertyKey $property$PropertyKey = DependencyProperty.RegisterAttachedReadOnly(DependencyPropertyName_$property$, typeof($type$),
+    typeof($ownerclass$), new PropertyMetadata($defaultValue$, (DependencyObject d, DependencyPropertyChangedEventArgs e) =>
+        $property$_PropertyChanged(d, ($type$)(e.OldValue), ($type$)(e.NewValue))));
+        
+// TODO: Add summary documentation to $property$Property.
+/// <summary>
+/// 
+/// </summary>
+/// <remarks>Identifies the $property$ attached dependency property.</remarks>
+public static readonly DependencyProperty $property$Property = $property$PropertyKey.DependencyProperty;
+
+private static void $property$_PropertyChanged(DependencyObject d, $type$ oldvalue, $type$ newValue)
+{
+    // TODO: Implement $ownerclass$.$property$_PropertyChanged(DependencyObject, $type$, $type$)
+}
+
+#endregion
+$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Define a generic collection DependencyProperty</Title>
+      <Shortcut>propdpcoll</Shortcut>
+      <Description>Code snippet for a generic collection property using DependencyProperty as the backing store</Description>
+      <Author>Leonard T. Erwine</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>itemType</ID>
+          <ToolTip>Collection element type</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal>
+          <ID>collType</ID>
+          <ToolTip>Generic collection type</ToolTip>
+          <Default>ObservableCollection</Default>
+        </Literal>
+        <Literal>
+          <ID>property</ID>
+          <ToolTip>Property Name</ToolTip>
+          <Default>MyProperty</Default>
+        </Literal>
+        <Literal>
+          <ID>ownerclass</ID>
+          <Function>ClassName()</Function>
+          <ToolTip>The owning class of this Property.  Typically the class that it is declared in.</ToolTip>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[
+#region $property$ Property Members
+        
+// /// <summary>
+// /// Occurs when the value of <see cref="$property$"/> has changed.
+// /// </summary>
+// public event EventHandler $property$PropertyChanged;
+
+// /// <summary>
+// /// Occurs when an item on <see cref="$property$"/> is added, removed, changed, moved, or the entire list is refreshed.
+// /// </summary>
+// public event NotifyCollectionChangedEventHandler $property$PropertyCollectionChanged;
+
+/// <summary>
+/// Defines the name for the <see cref="$property$"/> dependency property.
+/// </summary>
+public const string DependencyPropertyName_$property$ = "$property$";
+
+// TODO: Implement "$ownerclass$.CoerceValue($property$Property)" on default constructor.
+/// <summary>
+/// Identifies the <see cref="$property$"/> dependency property.
+/// </summary>
+public static readonly DependencyProperty $property$Property = DependencyProperty.Register(DependencyPropertyName_$property$, typeof($collType$<$itemType$>),
+    typeof($ownerclass$), new PropertyMetadata(null, (DependencyObject d, DependencyPropertyChangedEventArgs e) =>
+            (d as $ownerclass$).$property$_PropertyChanged(($collType$<$itemType$>)(e.OldValue), ($collType$<$itemType$>)(e.NewValue)),
+        (DependencyObject d, object baseValue) => (d as $ownerclass$).$property$_CoerceValue(baseValue)));
+
+// TODO: Add summary documentation to the $property$ Property.
+/// <summary>
+/// 
+/// </summary>
+public $collType$<$itemType$> $property$
+{
+    get { return ($collType$<$itemType$>)(GetValue($property$Property)); }
+    set { SetValue($property$Property, value); }
+}
+
+/// <summary>
+/// This gets called after the value associated with the <see cref="$property$"/> dependency property has changed.
+/// </summary>
+/// <param name="oldValue">The <seealso cref="$collType${$itemType$}"/> value before the <seealso cref="$property$"/> property was changed.</param>
+/// <param name="newValue">The <seealso cref="$collType${$itemType$}"/> value after the <seealso cref="$property$"/> property was changed.</param>
+protected virtual void $property$_PropertyChanged($collType$<$itemType$> oldValue, $collType$<$itemType$> newValue)
+{
+    if (oldValue != null)
+        oldValue.CollectionChanged -= $property$_CollectionChanged;
+    if (newValue != null)
+        newValue.CollectionChanged += $property$_CollectionChanged;
+                
+    // $property$PropertyChanged?.Invoke(this, EventArgs.Empty);
+}
+
+/// <summary>
+/// This gets called when an item in <see cref="$property$"/> is added, removed, changed, moved, or the entire collection is refreshed.
+/// </summary>
+/// <param name="sender">The object that raised the event.</param>
+/// <param name="e">Information about the event.</param>
+protected virtual void $property$_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+{
+    // TODO: Implement $ownerclass$.$property$_CollectionChanged(object, NotifyCollectionChangedEventArgs)
+                
+    // $property$PropertyCollectionChanged?.Invoke(sender, e);
+}
+
+/// <summary>
+/// This gets called whenever <see cref="$property$"/> is being re-evaluated, or coercion is specifically requested.
+/// </summary>
+/// <param name="baseValue">The new value of the property, prior to any coercion attempt.</param>
+/// <returns>The coerced value.</returns>
+public virtual $collType$<$itemType$> $property$_CoerceValue(object baseValue)
+{
+    return (baseValue as $collType$<$itemType$>) ?? new $collType$<$itemType$>();
+}
+
+#endregion
+$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

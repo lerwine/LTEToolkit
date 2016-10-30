@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Define a read-only DependencyProperty.</Title>
+      <Shortcut>propdpro</Shortcut>
+      <Description>Code snippet for a read-only property using DependencyProperty as the backing store.</Description>
+      <Author>Leonard T. Erwine</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Property Type</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal>
+          <ID>property</ID>
+          <ToolTip>Property Name</ToolTip>
+          <Default>MyProperty</Default>
+        </Literal>
+        <Literal>
+          <ID>ownerclass</ID>
+          <Function>ClassName()</Function>
+          <ToolTip>The owning class of this Property.  Typically the class that it is declared in.</ToolTip>
+        </Literal>
+        <Literal>
+          <ID>defaultvalue</ID>
+          <ToolTip>The default value for this property.</ToolTip>
+          <Default>0</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[
+#region $property$ Property Members
+
+// /// <summary>
+// /// Occurs when the value of <see cref="$property$"/> has changed.
+// /// </summary>
+// public event EventHandler $property$PropertyChanged;
+
+/// <summary>
+/// Defines the name for the <see cref="$property$"/> dependency property.
+/// </summary>
+public const string PropertyName_$property$ = "$property$";
+        
+private static readonly DependencyPropertyKey $property$PropertyKey = DependencyProperty.RegisterReadOnly(PropertyName_$property$, typeof($type$), typeof($ownerclass$),
+    new PropertyMetadata($defaultValue$/*, (DependencyObject d, DependencyPropertyChangedEventArgs e) =>
+        (d as $ownerclass$).$property$_PropertyChanged(($type$)(e.OldValue), ($type$)(e.NewValue))*/));
+
+/// <summary>
+/// Identifies the <see cref="$property$"/> dependency property.
+/// </summary>
+public static readonly DependencyProperty $property$Property = $property$PropertyKey.DependencyProperty;
+
+// TODO: Add summary documentation to the $property$ Property.
+/// <summary>
+/// 
+/// </summary>
+public $type$ $property$
+{
+      get { return ($type$)(GetValue($property$Property)); }
+      private set { SetValue($property$PropertyKey, value); }
+}
+
+// /// <summary>
+// /// This gets called after the value associated with the <see cref="$property$"/> dependency property has changed.
+// /// </summary>
+// /// <param name="oldValue">The <seealso cref="$type$"/> value before the <seealso cref="$property$"/> property was changed.</param>
+// /// <param name="newValue">The <seealso cref="$type$"/> value after the <seealso cref="$property$"/> property was changed.</param>
+// protected virtual void $property$_PropertyChanged($type$ oldValue, $type$ newValue)
+// {
+//     // $property$PropertyChanged?.Invoke(this, EventArgs.Empty);
+// }
+
+#endregion
+$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,18 @@
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="LTECodeSnippets.Leonard T. Erwine.df842119-ba24-4e46-ac45-852413df46a6" Version="1.0" Language="en-US" Publisher="Leonard T. Erwine" />
+    <DisplayName>LTECodeSnippets</DisplayName>
+    <Description>Empty VSIX Project.</Description>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0]" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" Version="[4.5,)" />
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="MVVM\MVVM.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="ComponentModel\ComponentModel.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="XmlSerializing\XmlSerializing.pkgdef" />
+  </Assets>
+</PackageManifest>

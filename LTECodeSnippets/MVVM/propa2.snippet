@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Define an attached DependencyProperty</Title>
+      <Shortcut>propa2</Shortcut>
+      <Description>Code snippet for an attached property using an Attached DependencyProperty as the backing store</Description>
+      <Author>Leonard T. Erwine (modified version of snippet authored by Microsoft Corporation)</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Property Type</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal>
+          <ID>property</ID>
+          <ToolTip>Property Name</ToolTip>
+          <Default>MyProperty</Default>
+        </Literal>
+        <Literal>
+          <ID>ownerclass</ID>
+          <Function>ClassName()</Function>
+          <ToolTip>The owning class of this Property. Typically the class that it is declared in.</ToolTip>
+        </Literal>
+        <Literal>
+          <ID>defaultValue</ID>
+          <ToolTip>The default value for this property.</ToolTip>
+          <Default>0</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[
+#region $property$ Attached Property Members
+
+/// <summary>
+/// Defines the name for the attached <see cref="$property$Property"/> property.
+/// </summary>
+public const string DependencyPropertyName_$property$ = "$property$";
+
+/// <summary>
+/// Gets the value of the attached <see cref="$property$Property"/>.
+/// </summary>
+/// <param name="obj">Object from which to retieve the value.</param>
+/// <returns><see cref="$type$"/> value from <paramref name="obj"/>.</returns>
+public static $type$ Get$property$(DependencyObject obj)
+{
+    if (obj == null)
+        throw new ArgumentNullException("obj");
+            
+    return ($type$)(obj.GetValue($property$Property));
+}
+
+/// <summary>
+/// Sets the value of the attached <see cref="$property$Property"/>.
+/// </summary>
+/// <param name="obj">Object on which to set the value.</param>
+/// <param name="value"><see cref="$type$"/> value to be set on <paramref name="obj"/>.</param>
+public static void Set$property$(DependencyObject obj, $type$ value)
+{
+    if (obj == null)
+        throw new ArgumentNullException("obj");
+            
+    obj.SetValue($property$Property, value);
+}
+
+// TODO: Add summary documentation to $property$Property.
+/// <summary>
+/// 
+/// </summary>
+/// <remarks>Identifies the $property$ attached dependency property.</remarks>
+public static readonly DependencyProperty $property$Property = DependencyProperty.RegisterAttached(DependencyPropertyName_$property$, typeof($type$), 
+    typeof($ownerclass$), new PropertyMetadata($defaultValue$, (DependencyObject d, DependencyPropertyChangedEventArgs e) =>
+        $property$_PropertyChanged(d, ($type$)(e.OldValue), ($type$)(e.NewValue))/*, $property$_CoerceValue*/));
+        
+private static void $property$_PropertyChanged(DependencyObject d, $type$ oldvalue, $type$ newValue)
+{
+    // TODO: Implement $ownerclass$.$property$_PropertyChanged(DependencyObject, $type$, $type$)
+}
+
+// /// <summary>
+// /// This gets called whenever <see cref="$property$Property"/> is being re-evaluated, or coercion is specifically requested.
+// /// </summary>
+// /// <param name="baseValue">The new value of the property, prior to any coercion attempt.</param>
+// /// <returns>The coerced value.</returns>
+// public static $type$ $property$_CoerceValue(DependencyObject d, object baseValue)
+// {
+//     throw new NotImplementedException();
+// }
+
+#endregion
+$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

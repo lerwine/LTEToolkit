@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Define a generic read-only collection DependencyProperty</Title>
+      <Shortcut>propdpcollro</Shortcut>
+      <Description>Code snippet for a generic read-only collection property using DependencyProperty as the backing store</Description>
+      <Author>Leonard T. Erwine</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>itemType</ID>
+          <ToolTip>Collection element type</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal>
+          <ID>collType</ID>
+          <ToolTip>Generic read-only collection type</ToolTip>
+          <Default>ReadOnlyObservableCollection</Default>
+        </Literal>
+        <Literal>
+          <ID>innerCollType</ID>
+          <ToolTip>Generic collection type</ToolTip>
+          <Default>ObservableCollection</Default>
+        </Literal>
+        <Literal>
+          <ID>property</ID>
+          <ToolTip>Property Name</ToolTip>
+          <Default>MyProperty</Default>
+        </Literal>
+        <Literal>
+          <ID>ownerclass</ID>
+          <Function>ClassName()</Function>
+          <ToolTip>The owning class of this Property.  Typically the class that it is declared in.</ToolTip>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[
+#region $property$ Property Members
+
+// /// <summary>
+// /// Occurs when an item on <see cref="$property$"/> is added, removed, changed, moved, or the entire list is refreshed.
+// /// </summary>
+// public event NotifyCollectionChangedEventHandler $property$PropertyCollectionChanged;
+
+/// <summary>
+/// Defines the name for the <see cref="$property$"/> dependency property.
+/// </summary>
+public const string PropertyName_$property$ = "$property$";
+
+private static readonly DependencyPropertyKey $property$PropertyKey = DependencyProperty.RegisterReadOnly(PropertyName_$property$,
+    typeof(ReadOnlyObservableCollection<$itemType$>), typeof($ownerclass$), new PropertyMetadata(null));
+
+/// <summary>
+/// Identifies the <see cref="$property$"/> read-only dependency property.
+/// </summary>
+public static readonly DependencyProperty $property$Property = $property$PropertyKey.DependencyProperty;
+
+private $innerCollType$<$itemType$> _inner$property$ = new $innerCollType$<$itemType$>();
+        
+/// <summary>
+/// Inner collection for <see cref="$property$"/>.
+/// </summary>
+protected $innerCollType$<$itemType$> Inner$property$ { get { return _inner$property$; } }
+        
+// TODO: Add summary documentation to the $property$ Property.
+/// <summary>
+/// 
+/// </summary>
+public $collType$<$itemType$> $property$
+{
+    get { return ($collType$<$itemType$>)(GetValue($property$Property)); }
+    private set { SetValue($property$PropertyKey, value); }
+}
+
+// TODO: Implement "$property$ = new $collType$<$itemType$>(_inner$property$)" on default constructor.
+// // TODO: If applicable, uncomment below and implement "_inner$property$.CollectionChanged += $property$_CollectionChanged;" on default constructor.
+// /// <summary>
+// /// This gets called when an item in <see cref="$property$"/> is added, removed, changed, moved, or the entire collection is refreshed.
+// /// </summary>
+// /// <param name="sender">The object that raised the event.</param>
+// /// <param name="e">Information about the event.</param>
+// protected virtual void $property$_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+// {
+//     // TODO: Implement $ownerclass$.$property$_CollectionChanged(object, NotifyCollectionChangedEventArgs)
+//         
+//     // $property$PropertyCollectionChanged?.Invoke(sender, e);
+// }
+
+#endregion
+$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

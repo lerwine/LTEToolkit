@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Define a relay command property with an event</Title>
+      <Shortcut>proprelaycmde</Shortcut>
+      <Description>Code snippet for a relay command property with an event.</Description>
+      <Author>Leonard T. Erwine</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>command</ID>
+          <ToolTip>Command Name</ToolTip>
+          <Default>MyClick</Default>
+        </Literal>
+        <Literal>
+          <ID>field</ID>
+          <ToolTip>Base Name for backing field</ToolTip>
+          <Default>myClick</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+<![CDATA[
+#region $command$ Command Property Members
+
+/// <summary>
+/// Occurs when <see cref="$command$Command"/> is executed.
+/// </summary>
+public event EventHandler $command$;
+
+private Events.RelayCommand _$field$Command = null;
+
+// TODO: Add summary documentation to $command$Command.
+/// <summary>
+/// 
+/// </summary>
+/// <remarks>Bindable property which provides the $command$ command behavior.</remarks>
+public Events.RelayCommand $command$Command
+{
+    get
+    {
+        if (_$field$Command == null)
+            _$field$Command = new Events.RelayCommand(On$command$);
+
+        return _$field$Command;
+    }
+}
+
+/// <summary>
+/// Implements the $command$ command behavior.
+/// </summary>
+/// <param name="parameter">Data to be used by this command.</param>
+/// <remarks>This gets invoked when <see cref="$command$Command"/> is executed.</remarks>
+protected virtual void On$command$(object parameter) { $command$?.Invoke(this, EventArgs.Empty); }
+
+#endregion
+$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
