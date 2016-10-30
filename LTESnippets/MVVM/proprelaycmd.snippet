@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Define a relay command property</Title>
+      <Shortcut>proprelaycmd</Shortcut>
+      <Description>Code snippet for a relay command property.</Description>
+      <Author>Leonard T. Erwine</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>namespace</ID>
+          <ToolTip>Namespace for command</ToolTip>
+          <Default>Interactivity.</Default>
+        </Literal>
+        <Literal>
+          <ID>command</ID>
+          <ToolTip>Command Name</ToolTip>
+          <Default>MyClick</Default>
+        </Literal>
+        <Literal>
+          <ID>field</ID>
+          <ToolTip>Base Name for backing field</ToolTip>
+          <Default>myClick</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+<![CDATA[
+#region $command$ Command Property Members
+
+private $namespace$RelayCommand _$field$Command = null;
+
+// TODO: Add summary to $command$Command
+/// <summary>
+/// 
+/// </summary>
+/// <remarks>Bindable property which provides the $command$ command behavior.</remarks>
+public $namespace$RelayCommand $command$Command
+{
+    get
+    {
+        if (_$field$Command == null)
+            _$field$Command = new $namespace$RelayCommand(On$command$);
+
+        return _$field$Command;
+    }
+}
+
+/// <summary>
+/// Implements the $command$ command behavior.
+/// </summary>
+/// <param name="parameter">Data to be used by this command.</param>
+/// <remarks>This gets invoked when <see cref="$command$Command"/> is executed.</remarks>
+protected virtual void On$command$(object parameter)
+{
+    // TODO: Implement On$command$ Logic
+}
+
+#endregion
+$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
