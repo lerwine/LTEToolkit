@@ -2,7 +2,7 @@
   <Metadata>
     <Identity Id="LTECodeSnippets.Leonard T. Erwine.df842119-ba24-4e46-ac45-852413df46a6" Version="1.0" Language="en-US" Publisher="Leonard T. Erwine" />
     <DisplayName>LTECodeSnippets</DisplayName>
-    <Description>Empty VSIX Project.</Description>
+    <Description xml:space="preserve">Lenny Erwine's Code Snippets and tools</Description>
   </Metadata>
   <Installation>
     <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0]" />

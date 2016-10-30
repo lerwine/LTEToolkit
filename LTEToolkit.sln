@@ -21,50 +21,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTEToolkitLibraryTestProject", "LTEToolkitLibraryTestProject\LTEToolkitLibraryTestProject.csproj", "{EABC6BDA-F80E-4B11-B1B4-225F17CBB1FF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code Snippets", "Code Snippets", "{91532036-0F7E-4685-AAE4-C905AE29F816}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp", "CSharp", "{978DC5A6-C56D-461A-A684-C851C146A8C2}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ComponentModel", "ComponentModel", "{432376AD-38EA-48A7-A122-1B99A29FC9FE}"
-	ProjectSection(SolutionItems) = preProject
-		Code Snippets\CSharp\ComponentModel\propertychanged.snippet = Code Snippets\CSharp\ComponentModel\propertychanged.snippet
-		Code Snippets\CSharp\ComponentModel\propinotify.snippet = Code Snippets\CSharp\ComponentModel\propinotify.snippet
-		Code Snippets\CSharp\ComponentModel\propinotifye.snippet = Code Snippets\CSharp\ComponentModel\propinotifye.snippet
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NetFX30", "NetFX30", "{99F0B503-6F8C-4AB2-8B27-65565A360BD5}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF", "WPF", "{6B88753F-0B0C-4401-8AFD-997BC29FFCB6}"
-	ProjectSection(SolutionItems) = preProject
-		Code Snippets\CSharp\NetFX30\WPF\propdp2.snippet = Code Snippets\CSharp\NetFX30\WPF\propdp2.snippet
-		Code Snippets\CSharp\NetFX30\WPF\propdpc.snippet = Code Snippets\CSharp\NetFX30\WPF\propdpc.snippet
-		Code Snippets\CSharp\NetFX30\WPF\propdpe.snippet = Code Snippets\CSharp\NetFX30\WPF\propdpe.snippet
-		Code Snippets\CSharp\NetFX30\WPF\propdpro.snippet = Code Snippets\CSharp\NetFX30\WPF\propdpro.snippet
-		Code Snippets\CSharp\NetFX30\WPF\propdproc.snippet = Code Snippets\CSharp\NetFX30\WPF\propdproc.snippet
-		Code Snippets\CSharp\NetFX30\WPF\propdproe.snippet = Code Snippets\CSharp\NetFX30\WPF\propdproe.snippet
-		Code Snippets\CSharp\NetFX30\WPF\propdps.snippet = Code Snippets\CSharp\NetFX30\WPF\propdps.snippet
-		Code Snippets\CSharp\NetFX30\WPF\propdpsc.snippet = Code Snippets\CSharp\NetFX30\WPF\propdpsc.snippet
-		Code Snippets\CSharp\NetFX30\WPF\propdpse.snippet = Code Snippets\CSharp\NetFX30\WPF\propdpse.snippet
-		Code Snippets\CSharp\NetFX30\WPF\propdpsro.snippet = Code Snippets\CSharp\NetFX30\WPF\propdpsro.snippet
-		Code Snippets\CSharp\NetFX30\WPF\propdpsroc.snippet = Code Snippets\CSharp\NetFX30\WPF\propdpsroc.snippet
-		Code Snippets\CSharp\NetFX30\WPF\propdpsroe.snippet = Code Snippets\CSharp\NetFX30\WPF\propdpsroe.snippet
-		Code Snippets\CSharp\NetFX30\WPF\proprelaycmd.snippet = Code Snippets\CSharp\NetFX30\WPF\proprelaycmd.snippet
-		Code Snippets\CSharp\NetFX30\WPF\proprelaycmde.snippet = Code Snippets\CSharp\NetFX30\WPF\proprelaycmde.snippet
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "XmlSerializing", "XmlSerializing", "{BC5E3F46-35A4-4AA1-BD7C-D1AF01AAD273}"
-	ProjectSection(SolutionItems) = preProject
-		Code Snippets\CSharp\XmlSerializing\propXmlArray.snippet = Code Snippets\CSharp\XmlSerializing\propXmlArray.snippet
-		Code Snippets\CSharp\XmlSerializing\propXmlAttrClass.snippet = Code Snippets\CSharp\XmlSerializing\propXmlAttrClass.snippet
-		Code Snippets\CSharp\XmlSerializing\propXmlAttrString.snippet = Code Snippets\CSharp\XmlSerializing\propXmlAttrString.snippet
-		Code Snippets\CSharp\XmlSerializing\propXmlAttrStringN.snippet = Code Snippets\CSharp\XmlSerializing\propXmlAttrStringN.snippet
-		Code Snippets\CSharp\XmlSerializing\propXmlAttrStruct.snippet = Code Snippets\CSharp\XmlSerializing\propXmlAttrStruct.snippet
-		Code Snippets\CSharp\XmlSerializing\propXmlElementClass.snippet = Code Snippets\CSharp\XmlSerializing\propXmlElementClass.snippet
-		Code Snippets\CSharp\XmlSerializing\propXmlElementString.snippet = Code Snippets\CSharp\XmlSerializing\propXmlElementString.snippet
-		Code Snippets\CSharp\XmlSerializing\propXmlElementStringN.snippet = Code Snippets\CSharp\XmlSerializing\propXmlElementStringN.snippet
-		Code Snippets\CSharp\XmlSerializing\propXmlElementStruct.snippet = Code Snippets\CSharp\XmlSerializing\propXmlElementStruct.snippet
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTEWPFToolkit", "LTEWPFToolkit\LTEWPFToolkit.csproj", "{34F74EF0-5E26-4225-9772-7D10FA141CAB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTECodeSnippets", "LTECodeSnippets\LTECodeSnippets.csproj", "{6FE115DA-E8C3-47B1-972C-5904BD77A7CE}"
@@ -106,13 +62,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{978DC5A6-C56D-461A-A684-C851C146A8C2} = {91532036-0F7E-4685-AAE4-C905AE29F816}
-		{432376AD-38EA-48A7-A122-1B99A29FC9FE} = {978DC5A6-C56D-461A-A684-C851C146A8C2}
-		{99F0B503-6F8C-4AB2-8B27-65565A360BD5} = {978DC5A6-C56D-461A-A684-C851C146A8C2}
-		{6B88753F-0B0C-4401-8AFD-997BC29FFCB6} = {99F0B503-6F8C-4AB2-8B27-65565A360BD5}
-		{BC5E3F46-35A4-4AA1-BD7C-D1AF01AAD273} = {978DC5A6-C56D-461A-A684-C851C146A8C2}
 	EndGlobalSection
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True

@@ -27,3 +27,4 @@ E:\GitHub\LTEToolkit\LTECodeSnippets\bin\Debug\extension.vsixmanifest
 E:\GitHub\LTEToolkit\LTECodeSnippets\obj\Debug\LTECodeSnippets.dll
 E:\GitHub\LTEToolkit\LTECodeSnippets\obj\Debug\LTECodeSnippets.pdb
 E:\GitHub\LTEToolkit\LTECodeSnippets\obj\Debug\extension.vsixmanifest
+E:\GitHub\LTEToolkit\LTECodeSnippets\bin\Debug\LTECodeSnippets.dll
