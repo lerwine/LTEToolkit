@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Define a property which raises the PropertyChanging and PropertyChanged events upon change</Title>
+      <Shortcut>propinotify</Shortcut>
+      <Description>Code snippet for a property which raises the  PropertyChanging and PropertyChanged events upon change by invoking the instance method with the signature &quot;void RaisePropertyChanging(string propertyName)&quot; before the change, and then invoking the instance method with the signature &quot;void RaisePropertyChanged(string propertyName)&quot; after the change.
+The "RaisePropertyChanging" method can be created using the &quot;propertychanging&quot; snippet, and the "RaisePropertyChanged" method can be created using the &quot;propertychanged&quot; snippet.</Description>
+      <Author>Leonard T. Erwine</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Property Type</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal>
+          <ID>property</ID>
+          <ToolTip>Property Name</ToolTip>
+          <Default>MyProperty</Default>
+        </Literal>
+        <Literal>
+          <ID>field</ID>
+          <ToolTip>Backing Field</ToolTip>
+          <Default>myVar</Default>
+        </Literal>
+        <Literal>
+          <ID>defaultvalue</ID>
+          <ToolTip>The default value for this property.</ToolTip>
+          <Default>0</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+<![CDATA[
+#region $property$ Property Members
+
+private $type$ _$field$ = $defaultvalue$;
+
+/// <summary>
+/// String constant for name of <see cref="$property$" /> property.
+/// </summary>
+protected const string PropertyName_$property$ = "$property$";
+
+// TODO: Add summary documentation to the $property$ Property.
+/// <summary>
+/// 
+/// </summary>
+public $type$ $property$
+{
+    get { return _$field$; }
+    set
+    {
+        $type$ oldValue = _$field$;
+        // TODO: Define/verify test method for detecting property change for $property$.
+        $end$// if ((oldValue == null) ? value == null : (value != null && ReferenceEquals(value, oldValue)))
+        if (oldValue == value)
+            return;
+
+        On$property$PropertyChanging(value);
+        RaisePropertyChanging(PropertyName_$property$);
+
+        _$field$ = value;
+        
+        try { On$property$PropertyChanged(oldValue); }
+        finally { RaisePropertyChanged(PropertyName_$property$); }
+    }
+}
+
+protected viritual void On$property$PropertyChanging($type$ newValue) { }
+
+protected viritual void On$property$PropertyChanged($type$ oldValue) { }
+
+#endregion
+$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

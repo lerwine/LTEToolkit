@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Add members to support INotifyPropertyChanging.</Title>
+      <Shortcut>propertychanging</Shortcut>
+      <Description>Code snippet to add members to support the System.ComponentModel.INotifyPropertyChanging interface.</Description>
+      <Author>Leonard T. Erwine</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.ComponentModel</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="csharp">
+<![CDATA[
+#region INotifyPropertyChanging Members
+
+/// <summary>
+/// Occurs when a property value is changing.
+/// </summary>
+public event PropertyChangingEventHandler PropertyChanging;
+
+/// <summary>
+/// Raises the <see cref="PropertyChanging" /> event.
+/// </summary>
+/// <param name="args">Name of the property that is changing.</param>
+protected void RaisePropertyChanging(string propertyName)
+{
+    PropertyChangingEventArgs args = new PropertyChangingEventArgs(propertyName);
+    OnPropertyChanging(args);
+    PropertyChanging?.Invoke(this, args);
+}
+
+/// <summary>
+/// This gets called when a property value is changing.
+/// </summary>
+/// <param name="args">Argument that describes the property that is changing.</param>
+protected virtual void OnPropertyChanging(PropertyChangingEventArgs args) { }
+
+#endregion
+$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
