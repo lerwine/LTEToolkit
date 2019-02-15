@@ -4,8 +4,8 @@
     <Header>
       <Title>Define an attached DependencyProperty</Title>
       <Shortcut>propa2</Shortcut>
-      <Description>Code snippet for an attached property using an Attached DependencyProperty as the backing store</Description>
-      <Author>Leonard T. Erwine (modified version of snippet authored by Microsoft Corporation)</Author>
+      <Description>Code snippet for an attached property using an Attached DependencyProperty as the backing store (modified version of &quot;propa&quot; snippet provided by Microsoft Corporation).</Description>
+      <Author>Leonard T. Erwine</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
@@ -33,6 +33,19 @@
           <Default>0</Default>
         </Literal>
       </Declarations>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows</Namespace>
+        </Import>
+      </Imports>
+      <References>
+        <Reference>
+          <Assembly>WindowsBase</Assembly>
+        </Reference>
+      </References>
       <Code Language="csharp">
         <![CDATA[
 #region $property$ Attached Property Members

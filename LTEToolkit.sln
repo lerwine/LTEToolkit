@@ -1,15 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTEToolkitLibrary", "LTEToolkitLibrary\LTEToolkitLibrary.csproj", "{0CAA3B7E-EE96-4BDE-87D3-DDB4E3DFBE42}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTEWebAppToolKit", "LTEWebAppToolKit\LTEWebAppToolKit.csproj", "{6FF9A3EB-2182-47C0-8D70-676155DFFA12}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplePaletteQuantizerModLTE", "SimplePaletteQuantizerModLTE\SimplePaletteQuantizerModLTE.csproj", "{6A586BEA-429F-4DF9-9501-9CCFA3D533DD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourFivePortability", "FourFivePortability\FourFivePortability.csproj", "{351DDA25-4FDD-463E-9985-368546CF5733}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{07BEB613-AF8E-4A55-A881-6240452085E2}"
 	ProjectSection(SolutionItems) = preProject
 		LICENSE = LICENSE
@@ -18,6 +10,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTEToolkitLibrary", "LTEToolkitLibrary\LTEToolkitLibrary.csproj", "{0CAA3B7E-EE96-4BDE-87D3-DDB4E3DFBE42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTEWebAppToolKit", "LTEWebAppToolKit\LTEWebAppToolKit.csproj", "{6FF9A3EB-2182-47C0-8D70-676155DFFA12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplePaletteQuantizerModLTE", "SimplePaletteQuantizerModLTE\SimplePaletteQuantizerModLTE.csproj", "{6A586BEA-429F-4DF9-9501-9CCFA3D533DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourFivePortability", "FourFivePortability\FourFivePortability.csproj", "{351DDA25-4FDD-463E-9985-368546CF5733}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTEToolkitLibraryTestProject", "LTEToolkitLibraryTestProject\LTEToolkitLibraryTestProject.csproj", "{EABC6BDA-F80E-4B11-B1B4-225F17CBB1FF}"
 EndProject
@@ -62,6 +62,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F9DA58C6-345E-4838-953F-77EA8CB0EF8F}
 	EndGlobalSection
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True

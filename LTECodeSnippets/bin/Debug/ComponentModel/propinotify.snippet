@@ -2,9 +2,10 @@
 <CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>Define a property which raises the PropertyChanged event</Title>
+      <Title>Define a property which raises the PropertyChanged event upon change</Title>
       <Shortcut>propinotify</Shortcut>
-      <Description>Code snippet for a property which raises the PropertyChanged event upon change.</Description>
+      <Description>Code snippet for a property which raises the PropertyChanged event upon change by invoking the instance method with the signature &quot;void RaisePropertyChanged(string propertyName)&quot;.
+The "RaisePropertyChanged" method can be created using the &quot;propertychanged&quot; snippet.</Description>
       <Author>Leonard T. Erwine</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -53,16 +54,23 @@ public $type$ $property$
     get { return _$field$; }
     set
     {
-        if (_$field$ == value)
+        $type oldValue = _$field$;
+        // TODO: Define/verify test method for detecting property change for $property$.
+        $end$// if ((oldValue == null) ? value == null : (value != null && ReferenceEquals(value, oldValue)))
+        if (oldValue == value)
             return;
 
         _$field$ = value;
-        RaisePropertyChanged(PropertyName_$property$);
+        
+        try { On$property$PropertyChanged(oldValue); }
+        finally { RaisePropertyChanged(PropertyName_$property$); }
     }
 }
 
+protected viritual void On$property$PropertyChanged($type$ oldValue) { }
+
 #endregion
-$end$]]>
+]]>
       </Code>
     </Snippet>
   </CodeSnippet>

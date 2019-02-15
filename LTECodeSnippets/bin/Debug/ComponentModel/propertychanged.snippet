@@ -11,6 +11,11 @@
       </SnippetTypes>
     </Header>
     <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.ComponentModel</Namespace>
+        </Import>
+      </Imports>
       <Code Language="csharp">
 <![CDATA[
 #region INotifyPropertyChanged Members
@@ -24,13 +29,18 @@ public event PropertyChangedEventHandler PropertyChanged;
 /// Raises the <see cref="PropertyChanged" /> event.
 /// </summary>
 /// <param name="args">Name of the property that has changed.</param>
-protected void RaisePropertyChanged(string propertyName) { OnPropertyChanged(new PropertyChangedEventArgs(propertyName)); }
+protected void RaisePropertyChanged(string propertyName)
+{
+    PropertyChangedEventArgs args = new PropertyChangedEventArgs(propertyName);
+    try { OnPropertyChanged(args); }
+    finally { PropertyChanged?.Invoke(this, args); }
+}
 
 /// <summary>
 /// This gets called when a property value changes.
 /// </summary>
 /// <param name="args">Argument that describes the property that has changed.</param>
-protected virtual void OnPropertyChanged(PropertyChangedEventArgs args) { PropertyChanged?.Invoke(this, args); }
+protected virtual void OnPropertyChanged(PropertyChangedEventArgs args) { }
 
 #endregion
 $end$]]>
